@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6297f13-115b-4cd3-9b0d-64d4d2a8adc1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sbb_/src/main/resources/templates/article_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbb_/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbb_/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,7 +117,7 @@
       <updated>1724899696511</updated>
       <workItem from="1724899697645" duration="2116000" />
       <workItem from="1724980885708" duration="15909000" />
-      <workItem from="1725016090603" duration="894000" />
+      <workItem from="1725016090603" duration="2025000" />
     </task>
     <servers />
   </component>
