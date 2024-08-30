@@ -1,0 +1,20 @@
+서비스 활용하기
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Aug 30 21:37:07 2024 +0900
+#
+# On branch CH2_2nd
+# Your branch is ahead of 'main/CH2_2nd' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   .idea/workspace.xml
+#	modified:   sbb_/build.gradle
+#	modified:   sbb_/src/main/java/com/mysite/sbb_/Article/ArticleController.java
+#	modified:   sbb_/src/main/java/com/mysite/sbb_/Article/ArticleRepository.java
+#	new file:   sbb_/src/main/java/com/mysite/sbb_/Article/ArticleService.java
+#	modified:   sbb_/src/main/java/com/mysite/sbb_/MainController.java
+#	new file:   sbb_/src/main/resources/templates/article_list.html
+#
