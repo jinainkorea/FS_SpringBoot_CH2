@@ -21,7 +21,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // 자동재시작
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // 롬복
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 
     // 데이터베이스
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.3'
