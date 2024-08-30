@@ -19,7 +19,7 @@ public class CommentController {
 
     @PostMapping("/create/{id}")
     public String createComment(Model model, @PathVariable("id") Integer id, @RequestParam(value="comment") String comment) {
-        Article article = this.articleService.getArticleById(id);
+        Article article = (Article) this.articleService.getArticle(id);
         this.commentService.createComment(article, comment);
         return String.format("redirect:/article/detail/%s", id);
     }

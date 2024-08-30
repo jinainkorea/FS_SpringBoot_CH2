@@ -18,14 +18,14 @@ public class ArticleController {
 
     @GetMapping("/list")
     public String list(Model model) {
-        List<Article> articles = this.articleService.getAllArticle();
-        model.addAttribute("articles", articles);
+        List<Article> articleList = this.articleService.getList();
+        model.addAttribute("articleList", articleList);
         return "article_list";
     }
 
     @GetMapping(value = "/detail/{id}")
     public String detail(Model model, @PathVariable Integer id) {
-        Article article = this.articleService.getArticleById(id);
+        Article article = (Article) this.articleService.getArticle(id);
         model.addAttribute("article", article);
         return "article_detail";
     }

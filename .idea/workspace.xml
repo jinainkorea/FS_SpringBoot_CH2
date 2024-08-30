@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6297f13-115b-4cd3-9b0d-64d4d2a8adc1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Comment/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Comment/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Comment/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/java/com/mysite/sbb_/Article/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbb_/src/main/resources/templates/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/resources/templates/article_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbb_/src/main/resources/templates/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/sbb_/src/main/resources/templates/article_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +72,7 @@
     "git-widget-placeholder": "CH2__2nd",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/81152/IdeaProjects/sbb_2장까지스스로빌드업/sbb",
+    "last_opened_file_path": "C:/Users/81152/IdeaProjects/sbb_HW/CH2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,7 +113,7 @@
       <updated>1724899696511</updated>
       <workItem from="1724899697645" duration="2116000" />
       <workItem from="1724980885708" duration="15909000" />
-      <workItem from="1725016090603" duration="7779000" />
+      <workItem from="1725016090603" duration="9703000" />
     </task>
     <servers />
   </component>

@@ -11,11 +11,11 @@ import com.mysite.sbb_.DataNotFoundException;
 public class ArticleService {
     private final ArticleRepository articleRepository;
 
-    public List<Article> getAllArticle() {
+    public List<Article> getList() {
         return this.articleRepository.findAll();
     }
 
-    public Article getArticleById(Integer id) {
+    public Article getArticle(Integer id) {
         Optional<Article> article = this.articleRepository.findById(id);
         if(article.isPresent()) {
             return article.get();
