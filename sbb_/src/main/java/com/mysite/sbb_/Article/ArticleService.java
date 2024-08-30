@@ -1,5 +1,6 @@
 package com.mysite.sbb_.Article;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,5 +23,13 @@ public class ArticleService {
         } else {
             throw new DataNotFoundException("Article Not Found");
         }
+    }
+
+    public void create(String title, String content) {
+        Article article = new Article();
+        article.setTitle(title);
+        article.setContent(content);
+        article.setCreateDate(LocalDateTime.now());
+        this.articleRepository.save(article);
     }
 }

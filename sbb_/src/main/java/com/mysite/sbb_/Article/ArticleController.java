@@ -1,11 +1,9 @@
 package com.mysite.sbb_.Article;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -28,6 +26,17 @@ public class ArticleController {
         Article article = (Article) this.articleService.getArticle(id);
         model.addAttribute("article", article);
         return "article_detail";
+    }
+
+    @GetMapping("/create")
+    public String ArticleCreate() {
+        return "article_form";
+    }
+
+    @PostMapping("/create")
+    public String ArticleCreate(@RequestParam(value="title") String title, @RequestParam(value="content") String content) {
+        this.articleService.create(title, content);
+        return "redirect:/article/list";
     }
 
 }
