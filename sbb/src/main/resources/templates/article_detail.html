@@ -35,7 +35,7 @@
          role="alert" th:if="${#fields.hasAnyErrors()}">
       <div th:each="err : ${#fields.allErrors()}" th:text="${err}" />
     </div>
-    <textarea name="content" id="content" rows="10" class="form-control"></textarea>
+    <textarea th:field="*{content}" rows="10" class="form-control"></textarea>
     <input type="submit" value="답글달기">
   </form>
 
