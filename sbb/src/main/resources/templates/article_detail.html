@@ -1,6 +1,5 @@
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
-<div class="container my-3">
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
 
   <!--본문-->
   <h2 class="border-bottom py-2" th:text="${article.title}">제목</h2>
@@ -28,13 +27,15 @@
       </div>
     </div>
   </div>
+
   <!--답글 폼-->
   <form th:action="@{|/comment/create/${article.id}|}" method="post">
     <textarea name="comment" id="comment" rows="10"></textarea>
     <input type="submit" value="답글달기">
   </form>
-</div>
 
+</div>
+</html>
 
 
 
