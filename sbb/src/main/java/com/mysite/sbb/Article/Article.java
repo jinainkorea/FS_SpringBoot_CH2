@@ -1,10 +1,12 @@
 package com.mysite.sbb.Article;
 
+import com.mysite.sbb.Comment.Comment;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,4 +23,7 @@ public class Article {
     private String content;
 
     private LocalDateTime createDate;
+
+    @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
+    private List<Comment> commentList;
 }

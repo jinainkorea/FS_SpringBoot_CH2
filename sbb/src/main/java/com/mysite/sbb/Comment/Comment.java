@@ -1,5 +1,6 @@
 package com.mysite.sbb.Comment;
 
+import com.mysite.sbb.Article.Article;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,4 +20,6 @@ public class Comment {
 
     private LocalDateTime createDate;
 
+    @ManyToOne
+    private Article article;
 }
