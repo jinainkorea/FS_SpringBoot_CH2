@@ -26,4 +26,6 @@ public class CommentController {
         this.commentService.createComment(article, content);
         return String.format("redirect:/article/detail/%s", id);
     }
+
+
 }

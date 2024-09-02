@@ -13,12 +13,14 @@
         <tr th:each="article, loop: ${articleList}">
           <td th:text="${loop.count}">번호</td>
           <td>
-            <a th:href="|/article/detail/${article.id}|" th:text="article.title"></a>
+            <a th:href="|/article/detail/${article.id}|" th:text="${article.title}"></a>
           </td>
           <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}">작성날짜</td>
         </tr>
       </tbody>
     </table>
 
+  <!--글 등록 버튼-->
+    <a th:href="@{/article/create}" class="btn btn-primary">글 등록</a>
   </div>
 </html>

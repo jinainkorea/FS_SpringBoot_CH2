@@ -6,9 +6,7 @@ import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("article")
 @RequiredArgsConstructor
@@ -28,5 +26,16 @@ public class ArticleController {
         Article article = this.articleService.getArticleById(id);
         model.addAttribute("article", article);
         return "article_detail";
+    }
+
+    @GetMapping("/create")
+    public String create(Model model) {
+        return "article_form";
+    }
+
+    @PostMapping("/create")
+    public String create(Model model, @RequestParam(value="title") String title, @RequestParam(value="content") String content) {
+        articleService.createArticle(title, content);
+        return "redirect:/article/list";
     }
 }
