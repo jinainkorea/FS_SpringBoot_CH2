@@ -1,14 +1,21 @@
-<table>
-  <thead>
+<link rel="stylesheet" th:href="@{/bootstrap.min.css}">
+<div class="container my-3">
+  <table class="table">
+    <thead class="table-dark">
     <tr>
+      <th>번호</th>
       <th>제목</th>
       <th>내용</th>
     </tr>
-  </thead>
-  <tbody>
-    <tr th:each="article: ${articleList}">
-      <td th:text="${article.title}"></td>
-      <td th:text="${article.createDate}"></td>
-    </tr>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <tr th:each="article, loop: ${articleList}">
+        <td th:text="${loop.count}">번호</td>
+        <td>
+          <a th:href="|/article/detail/${article.id}|" th:text="article.title"></a>
+        </td>
+        <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}">작성날짜</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
