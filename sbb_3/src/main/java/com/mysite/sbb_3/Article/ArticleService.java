@@ -1,5 +1,6 @@
 package com.mysite.sbb_3.Article;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,5 +24,13 @@ public class ArticleService {
         } else {
             throw new DataNotFoundException("Article Not Found");
         }
+    }
+
+    public void createArticle(String title, String content) {
+        Article article = new Article();
+        article.setTitle(title);
+        article.setContent(content);
+        article.setCreateDate(LocalDateTime.now());
+        this.articleRepository.save(article);
     }
 }
