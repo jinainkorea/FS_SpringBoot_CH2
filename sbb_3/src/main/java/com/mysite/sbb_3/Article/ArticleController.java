@@ -14,7 +14,7 @@ public class ArticleController {
 
     private final ArticleService articleService;
 
-    @GetMapping("/article")
+    @GetMapping("/article/list")
     public String list(Model model){
         List<Article> articleList = this.articleService.getList();
         model.addAttribute("articleList", articleList);

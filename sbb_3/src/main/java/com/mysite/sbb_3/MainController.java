@@ -6,9 +6,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
-    @GetMapping("/")
-    @ResponseBody
+    @GetMapping("/index")
     public String index() {
-        return "<h2>index</h2>";
+        return "index";
+    }
+
+    @GetMapping("/")
+    public String root() {
+        return "redirect:/article/list";
     }
 }
