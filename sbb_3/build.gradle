@@ -19,8 +19,18 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // 테스트 - JUnit도 포함되어 있다.
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // 자동 리빌드
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // 롬복
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
 }
 
 tasks.named('test') {
