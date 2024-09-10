@@ -9,7 +9,9 @@
   <tbody>
     <tr th:each="article, loop: ${articleList}">
       <td th:text="${loop.count}"></td>
-      <td th:text="${article.title}"></td>
+      <td>
+        <a th:href="|/article/detail/${article.id}|" th:text="${article.title}"></a>
+      </td>
       <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}"></td>
     </tr>
   </tbody>
