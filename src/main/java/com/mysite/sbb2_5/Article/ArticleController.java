@@ -1,5 +1,7 @@
 package com.mysite.sbb2_5.Article;
 
+import com.mysite.sbb2_5.Comment.Comment;
+import com.mysite.sbb2_5.Comment.CommentService;
 import org.springframework.ui.Model;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -21,10 +23,8 @@ public class ArticleController {
 
   @GetMapping("/article/detail/{id}")
   public String detail(Model model, @PathVariable("id") Integer id) {
-    Optional<Article> article = this.articleService.getArticleById(id);
-    if (article.isPresent()) {
-      model.addAttribute("article", article.get());
-    }
+    Article article = this.articleService.getArticleById(id).get();
+    model.addAttribute("article", article);
     return "article_detail";
   }
 }
