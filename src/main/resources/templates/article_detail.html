@@ -1,17 +1,22 @@
-<!-- 글 본문 -->
-<h2>제목:</h2>
-<span th:text="${article.title}"></span>
-<h2>내용:</h2>
-<span th:text="${article.content}"></span>
+<html layout:decorate="~{layout}">
+<div layout:fragment="content">
+  <!-- 글 본문 -->
+  <h2>제목:</h2>
+  <span th:text="${article.title}"></span>
+  <h2>내용:</h2>
+  <span th:text="${article.content}"></span>
 
-<!-- 답변 반복 -->
-<h2>답변</h2>
-<div th:each="comment: ${article.commentList}">
-  <div th:text="${comment.content}"></div>
+  <!-- 답변 반복 -->
+  <h2>답변</h2>
+  <div th:each="comment: ${article.commentList}">
+    <div th:text="${comment.content}"></div>
+  </div>
+
+  <h2>답변 등록</h2>
+  <form th:action="|/comment/create/${article.id}|" method="post">
+    <textarea name="content" id="content" rows="10"></textarea>
+    <input type="submit" value="답변 등록">
+  </form>
 </div>
+</html>
 
-<h2>답변 등록</h2>
-<form th:action="|/comment/create/${article.id}|" method="post">
-  <textarea name="content" id="content" rows="10"></textarea>
-  <input type="submit" value="답변 등록">
-</form>

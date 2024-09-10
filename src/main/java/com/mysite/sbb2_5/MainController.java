@@ -6,10 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@ResponseBody
 public class MainController {
-  @GetMapping("/")
+  @GetMapping("/index")
+  @ResponseBody
   public String index() {
     return "hi";
+  }
+
+  @GetMapping("/")
+  public String root() {
+    return "redirect:/article/list";
   }
 }
