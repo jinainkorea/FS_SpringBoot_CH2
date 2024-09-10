@@ -15,7 +15,7 @@ public class CommentController {
   private final ArticleService articleService;
 
   @PostMapping("/comment/create/{id}")
-  public String createComment(@PathVariable Integer id, @RequestParam("content") String content) {
+  public String createComment(@PathVariable("id") Integer id, @RequestParam("content") String content) {
     Article article = this.articleService.getArticleById(id).get();
     this.commentService.create(article, content);
     return String.format("redirect:/article/detail/%s", id);

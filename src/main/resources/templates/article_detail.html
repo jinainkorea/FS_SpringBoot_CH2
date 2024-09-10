@@ -5,6 +5,7 @@
 <span th:text="${article.content}"></span>
 
 <!-- 답변 반복 -->
+<h2>답변</h2>
 <div th:each="comment: ${article.commentList}">
   <div th:text="${comment.content}"></div>
 </div>
