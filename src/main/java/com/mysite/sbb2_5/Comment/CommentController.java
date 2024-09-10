@@ -4,6 +4,7 @@ import com.mysite.sbb2_5.Article.Article;
 import com.mysite.sbb2_5.Article.ArticleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
@@ -14,9 +15,12 @@ public class CommentController {
   private final ArticleService articleService;
 
   @PostMapping("/create/{id}")
-  public String createComment(@PathVariable("id") Integer id, @RequestParam("content") String content) {
+  public String createComment(@PathVariable("id") Integer id, CommentForm commentForm, BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+      return "article_detail";
+    }
     Article article = this.articleService.getArticleById(id).get();
-    this.commentService.create(article, content);
+    this.commentService.create(article, commentForm.getContent());
     return String.format("redirect:/article/detail/%s", id);
   }
 }

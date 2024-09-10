@@ -1,5 +1,7 @@
 <html layout:decorate="~{layout}">
 <div layout:fragment="content" class="container my-3">
+
+<!-- 글 목록 -->
   <table class="table">
     <thead class="table-dark">
     <tr>
@@ -18,6 +20,9 @@
     </tr>
     </tbody>
   </table>
+
+<!-- 글 등록 버튼 -->
+  <a th:href="@{/article/create}" class="btn btn-primary">글 등록</a>
 </div>
 </html>
 

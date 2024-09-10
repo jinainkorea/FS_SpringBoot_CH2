@@ -2,7 +2,9 @@ package com.mysite.sbb2_5.Article;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,5 +19,13 @@ public class ArticleService {
 
   public Optional<Article> getArticleById(Integer id) {
     return this.articleRepository.findById(id);
+  }
+
+  public void create(ArticleForm articleForm) {
+    Article article = new Article();
+    article.setTitle(articleForm.getTitle());
+    article.setContent(articleForm.getContent());
+    article.setCreateDate(LocalDateTime.now());
+    this.articleRepository.save(article);
   }
 }
