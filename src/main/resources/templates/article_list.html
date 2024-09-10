@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+      <th>작성일</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="article, loop: ${articleList}">
+      <td th:text="${loop.count}"></td>
+      <td th:text="${article.title}"></td>
+      <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}"></td>
+    </tr>
+  </tbody>
+</table>
+
