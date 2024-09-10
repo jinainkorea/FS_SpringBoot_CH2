@@ -14,6 +14,7 @@ public class CommentController {
   private final CommentService commentService;
   private final ArticleService articleService;
 
+//  여기여기
   @PostMapping("/create/{id}")
   public String createComment(@PathVariable("id") Integer id, CommentForm commentForm, BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
