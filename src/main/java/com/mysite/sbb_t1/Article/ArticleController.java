@@ -28,7 +28,10 @@ public class ArticleController {
   }
 
   @PostMapping("/create")
-  public String createArticle(ArticleForm articleForm) {
+  public String createArticle(@Valid ArticleForm articleForm, BindingResult bindingResult) {
+    if(bindingResult.hasErrors()) {
+      return "article_form";
+    }
     this.articleService.create(articleForm.getTitle(), articleForm.getContent());
     return "redirect:/";
   }
