@@ -1,7 +1,7 @@
 <html layout:decorate="~{layout}">
-<div layout:fragment="content">
-    <table>
-        <thead>
+<div layout:fragment="content" class="container my-3">
+    <table class="table">
+        <thead class="table-dark">
         <tr>
             <th>번호</th>
             <th>제목</th>
@@ -11,10 +11,13 @@
         <tbody>
         <tr th:each="article, loop : ${articleList}">
             <td th:text="${loop.count}"></td>
-            <td th:text="${article.title}"></td>
-            <td th:text="${#farticle.createDate}"></td>
+            <td>
+                <a href="#" th:text="${article.title}"></a>
+            </td>
+            <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd')}"></td>
         </tr>
         </tbody>
     </table>
+    <a th:href="@{/article/create}">글 등록하기</a>
 </div>
 </html>
