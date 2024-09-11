@@ -29,4 +29,10 @@ public class ArticleController {
   public String create(ArticleForm articleForm) {
     return "article_form";
   }
+
+  @PostMapping("/create")
+  public String createArticle(ArticleForm articleForm) {
+    this.articleService.create(articleForm.getTitle(), articleForm.getContent());
+    return "redirect:/";
+  }
 }

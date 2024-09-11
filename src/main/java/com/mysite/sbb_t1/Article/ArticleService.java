@@ -14,4 +14,12 @@ public class ArticleService {
   public List<Article> getList() {
     return this.articleRepository.findAll();
   }
+
+  public void create(String title, String content) {
+    Article article = new Article();
+    article.setTitle(title);
+    article.setContent(content);
+    article.setCreateDate(LocalDateTime.now());
+    articleRepository.save(article);
+  }
 }
