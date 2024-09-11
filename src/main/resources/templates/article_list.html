@@ -14,7 +14,7 @@
             <td>
                 <a th:href="@{|/article/detail/${article.id}|}" th:text="${article.title}"></a>
             </td>
-            <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd')}"></td>
+            <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}"></td>
         </tr>
         </tbody>
     </table>
