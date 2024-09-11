@@ -24,7 +24,11 @@ public class ArticleService {
     articleRepository.save(article);
   }
 
-  public Optional<Article> getArticleById(Integer id) {
-    return this.articleRepository.findById(id);
+  public Article getArticleById(Integer id) {
+    Optional<Article> articleObj = this.articleRepository.findById(id);
+    if (articleObj.isEmpty()) {
+      throw new RuntimeException("article이 존재하지 않습니다.");
+    }
+    return articleObj.get();
   }
 }

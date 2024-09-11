@@ -38,7 +38,7 @@ public class ArticleController {
 
   @GetMapping("/detail/{id}")
   public String detail(Model model, @PathVariable("id") Integer id) {
-    Article article = this.articleService.getArticleById(id).get();
+    Article article = this.articleService.getArticleById(id);
     model.addAttribute("article", article);
     return "article_detail";
   }
