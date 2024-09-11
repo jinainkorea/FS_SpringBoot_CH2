@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,5 +22,9 @@ public class ArticleService {
     article.setContent(content);
     article.setCreateDate(LocalDateTime.now());
     articleRepository.save(article);
+  }
+
+  public Optional<Article> getArticleById(Integer id) {
+    return this.articleRepository.findById(id);
   }
 }
